@@ -124,16 +124,17 @@ int main ()
 		printf ("\t1 - Novo registro \n"); 
 		printf ("\t2 - Consultar nome \n");
 		printf ("\t3 - Deletar registro \n\n"); 
-		printf ("Opção: ");
+		printf ("\t4 - Sair do sistema \n\n");
+		printf ("Opção: "); //fim do menu
 		
-		scanf("%d", &opcao); 
+		scanf("%d", &opcao); //armazena a escolha do usuário
 		
-		system("cls"); 
+		system("cls"); //comando responsável por limpar a tela
 		
-		switch(opcao)
+		switch(opcao) //inicio da seleção do menu
 		{
 			case 1: //esses : abre uma chave
-			registro();
+			registro(); //chama a função
 			break;
 			
 			case 2: 
@@ -144,10 +145,15 @@ int main ()
 			deletar();
 			break;
 			
+			case 4:
+			printf("Obrigado por utilizar o sistema \n");
+			return 0;
+			break;
+			
 			default:
 			printf("Essa opção não está disponível.\n");
 			system("pause");
-		}
+		} //fim da seleção das opções do menu
 		
 		}
 	}
